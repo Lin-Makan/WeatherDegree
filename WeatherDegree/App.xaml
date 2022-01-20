@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherDegree.App">
+
+    
+        <StackLayout Margin="10" Padding="20" WidthRequest="150" BackgroundColor="#99FFFFFF">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState Name="Portrait">
+                        <VisualState.Setters>
+                            <Setter Property="WidthRequest" Value="150" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Landscape">
+                        <VisualState.Setters>
+                            <Setter Property="WidthRequest" Value="200" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </StackLayout>
+        
+    
+    
+    <Image WidthRequest="100" HeightRequest="100" Aspect="AspectFit" HorizontalOptions="Center" Source="{Binding Icon}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState Name="Portrait">
+                    <VisualState.Setters>
+                        <Setter Property="WidthRequest" Value="100" />
+                        <Setter Property="HeightRequest" Value="100" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState Name="Landscape">
+                    <VisualState.Setters>
+                        <Setter Property="WidthRequest" Value="150" />
+                        <Setter Property="HeightRequest" Value="150" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+    </Image>
+
+
+</Application>
